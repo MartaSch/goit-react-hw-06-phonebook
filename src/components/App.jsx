@@ -1,16 +1,14 @@
-export const App = () => {
+import ContactForm from './ContactsForm/ContactsForm';
+import ContactList from './ContactList/ContactList';
+import { nanoid } from 'nanoid';
+import Filter from './Filter/Filter';
+
+export default function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <ContactForm />
+      <Filter />
+      <ContactList key={nanoid()} />
     </div>
   );
-};
+}
